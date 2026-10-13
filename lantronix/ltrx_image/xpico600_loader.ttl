@@ -1,0 +1,97 @@
+dirpath = 'C:\Users\sguggilum\Downloads\xpico_ax_release_loaders 1\release_loaders'
+prodldr = '\ltrx_midas_ax_recovery_loader_signed.bin'
+
+setdir dirpath
+prodldr_file = dirpath
+
+strconcat prodldr_file prodldr
+
+baudratetx = '9600'
+baudrateprod = '9600'
+baudratefw = '115200'
+
+fw_key = '1.0.0.0R1'
+eth_key = '172.24.20.'
+ipaddress = '0'
+
+prodid = 'Q2'
+
+cmdconn = '/C='
+cmdbaud = ' /BAUD='
+
+cmdethconn = '/nossh'
+
+clearscreen 1
+disconnect 0
+flushrecv
+
+str2int tx baudratetx
+setbaud tx
+
+dispstr #13#10
+dispstr 'Polling ...'
+dispstr #13#10#13#10
+
+Logger = 0
+
+:getcomport
+inputbox 'Comport' 'Comport Number'
+bringupbox
+comport = inputstr
+
+
+:loadprod
+result=0
+tmpstring = cmdconn
+strconcat tmpstring comport
+strconcat tmpstring cmdbaud
+strconcat tmpstring baudrateprod
+
+while result!=2
+ connect tmpstring
+ mpause 50
+endwhile
+
+pause 1
+
+:wait_for_str
+timeout = 30
+mtimeout = 200
+result = 0
+
+while result = 0
+    recvln
+    strscan inputstr 'checking for serial boot..'
+endwhile
+if result=0 goto wait_for_str
+
+:send_bang_sl
+ timeout=0
+ mtimeout=200	
+ result=0
+ while result=0
+  flushrecv
+  sendln '!SL'
+  recvln
+ endwhile
+
+sendfile prodldr_file 1
+
+:wait_for_str
+timeout = 300
+mtimeout = 200
+result = 0
+
+while result = 0
+    recvln
+    strscan inputstr 'G'
+endwhile
+if result=0 goto wait_for_str
+
+str2int tx baudratefw
+setbaud tx
+sendln
+flushrecv
+end
+
+

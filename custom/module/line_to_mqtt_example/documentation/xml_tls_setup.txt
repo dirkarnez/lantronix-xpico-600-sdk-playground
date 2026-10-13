@@ -1,0 +1,121 @@
+<?xml version="1.0" standalone="yes"?>
+<!-- Automatically generated XML -->
+<!DOCTYPE configrecord [
+   <!ELEMENT configrecord (configgroup+)>
+   <!ELEMENT configgroup (configitem+)>
+   <!ELEMENT configitem (value+)>
+   <!ELEMENT value (#PCDATA)>
+   <!ATTLIST configrecord version CDATA #IMPLIED>
+   <!ATTLIST configgroup name CDATA #IMPLIED>
+   <!ATTLIST configgroup instance CDATA #IMPLIED>
+   <!ATTLIST configitem name CDATA #IMPLIED>
+   <!ATTLIST configitem instance CDATA #IMPLIED>
+   <!ATTLIST value name CDATA #IMPLIED>
+]>
+<configrecord version = "0.1.0.1">
+   <configgroup name = "MQTT" instance = "1">
+      <configitem name = "Protocol">
+         <value>TLS</value>
+      </configitem>
+      <configitem name = "Broker Address">
+         <value>test.mosquitto.org</value>
+      </configitem>
+      <configitem name = "Broker Port">
+         <value>8883</value>
+      </configitem>
+      <configitem name = "Credential Name">
+         <value>mosq</value>
+      </configitem>
+      <configitem name = "Local Port">
+         <value>&lt;Random&gt;</value>
+      </configitem>
+      <configitem name = "Device ID">
+         <value>Test</value>
+      </configitem>
+      <configitem name = "User Name">
+         <value></value>
+      </configitem>
+      <configitem name = "Auth Token">
+         <value></value>
+      </configitem>
+      <configitem name = "Topic">
+         <value>ltrx-test-root/topic-1</value>
+      </configitem>
+      <configitem name = "Diagnostic Log">
+         <value>Full</value>
+      </configitem>
+   </configgroup>
+   <configgroup name = "TLS Credential" instance = "mosq">
+      <configitem name = "Protocols">
+         <value>TLS1.0, TLS1.1, TLS1.2</value>
+      </configitem>
+      <configitem name = "Private Key">
+         <value></value>
+      </configitem>
+      <configitem name = "Certificate">
+         <value></value>
+      </configitem>
+      <configitem name = "Higher Authority" instance = "1">
+         <value name = "Certificate"></value>
+      </configitem>
+      <configitem name = "Higher Authority" instance = "2">
+         <value name = "Certificate"></value>
+      </configitem>
+      <configitem name = "Higher Authority" instance = "3">
+         <value name = "Certificate"></value>
+      </configitem>
+      <configitem name = "Trusted Authority" instance = "1">
+         <value name = "Certificate">-----BEGIN CERTIFICATE----- MIIC8DCCAlmgAwIBAgIJAOD63PlXjJi8MA0GCSqGSIb3DQEBBQUAMIGQMQswCQYD VQQGEwJHQjEXMBUGA1UECAwOVW5pdGVkIEtpbmdkb20xDjAMBgNVBAcMBURlcmJ5 MRIwEAYDVQQKDAlNb3NxdWl0dG8xCzAJBgNVBAsMAkNBMRYwFAYDVQQDDA1tb3Nx dWl0dG8ub3JnMR8wHQYJKoZIhvcNAQkBFhByb2dlckBhdGNob28ub3JnMB4XDTEy MDYyOTIyMTE1OVoXDTIyMDYyNzIyMTE1OVowgZAxCzAJBgNVBAYTAkdCMRcwFQYD VQQIDA5Vbml0ZWQgS2luZ2RvbTEOMAwGA1UEBwwFRGVyYnkxEjAQBgNVBAoMCU1v c3F1aXR0bzELMAkGA1UECwwCQ0ExFjAUBgNVBAMMDW1vc3F1aXR0by5vcmcxHzAd BgkqhkiG9w0BCQEWEHJvZ2VyQGF0Y2hvby5vcmcwgZ8wDQYJKoZIhvcNAQEBBQAD gY0AMIGJAoGBAMYkLmX7SqOT/jJCZoQ1NWdCrr/pq47m3xxyXcI+FLEmwbE3R9vM rE6sRbP2S89pfrCt7iuITXPKycpUcIU0mtcT1OqxGBV2lb6RaOT2gC5pxyGaFJ+h A+GIbdYKO3JprPxSBoRponZJvDGEZuM3N7p3S/lRoi7G5wG5mvUmaE5RAgMBAAGj UDBOMB0GA1UdDgQWBBTad2QneVztIPQzRRGj6ZHKqJTv5jAfBgNVHSMEGDAWgBTa d2QneVztIPQzRRGj6ZHKqJTv5jAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBBQUA A4GBAAqw1rK4NlRUCUBLhEFUQasjP7xfFqlVbE2cRy0Rs4o3KS0JwzQVBwG85xge REyPOFdGdhBY2P1FNRy0MDr6xr+D2ZOwxs63dG1nnAnWZg7qwoLgpZ4fESPD3PkA 1ZgKJc2zbSQ9fCPxt2W3mdVav66c6fsb7els2W2Iz7gERJSX -----END CERTIFICATE-----</value>
+      </configitem>
+      <configitem name = "Trusted Authority" instance = "2">
+         <value name = "Certificate"></value>
+      </configitem>
+      <configitem name = "Trusted Authority" instance = "3">
+         <value name = "Certificate"></value>
+      </configitem>
+      <configitem name = "Trusted Authority" instance = "4">
+         <value name = "Certificate"></value>
+      </configitem>
+      <configitem name = "Trusted Authority" instance = "5">
+         <value name = "Certificate"></value>
+      </configitem>
+   </configgroup>
+   <configgroup name = "Line" instance = "1">
+      <configitem name = "Name">
+         <value></value>
+      </configitem>
+      <configitem name = "Interface">
+         <value>RS232</value>
+      </configitem>
+      <configitem name = "State">
+         <value>Enabled</value>
+      </configitem>
+      <configitem name = "Protocol">
+         <value>MQTT</value>
+      </configitem>
+      <configitem name = "Baud Rate">
+         <value>921600 bits per second</value>
+      </configitem>
+      <configitem name = "Parity">
+         <value>None</value>
+      </configitem>
+      <configitem name = "Data Bits">
+         <value>8</value>
+      </configitem>
+      <configitem name = "Stop Bits">
+         <value>1</value>
+      </configitem>
+      <configitem name = "Flow Control">
+         <value>Hardware</value>
+      </configitem>
+      <configitem name = "Gap Timer">
+         <value>&lt;Four Character Periods&gt;</value>
+      </configitem>
+      <configitem name = "Threshold">
+         <value>56 bytes</value>
+      </configitem>
+      <configitem name = "Push">
+         <value></value>
+      </configitem>
+   </configgroup>
+</configrecord>

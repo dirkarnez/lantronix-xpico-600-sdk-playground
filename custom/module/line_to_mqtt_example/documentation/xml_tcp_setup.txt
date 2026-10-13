@@ -1,0 +1,83 @@
+<?xml version="1.0" standalone="yes"?>
+<!-- Automatically generated XML -->
+<!DOCTYPE configrecord [
+   <!ELEMENT configrecord (configgroup+)>
+   <!ELEMENT configgroup (configitem+)>
+   <!ELEMENT configitem (value+)>
+   <!ELEMENT value (#PCDATA)>
+   <!ATTLIST configrecord version CDATA #IMPLIED>
+   <!ATTLIST configgroup name CDATA #IMPLIED>
+   <!ATTLIST configgroup instance CDATA #IMPLIED>
+   <!ATTLIST configitem name CDATA #IMPLIED>
+   <!ATTLIST configitem instance CDATA #IMPLIED>
+   <!ATTLIST value name CDATA #IMPLIED>
+]>
+<configrecord version = "0.1.0.1">
+   <configgroup name = "MQTT" instance = "1">
+      <configitem name = "Protocol">
+         <value>TCP</value>
+      </configitem>
+      <configitem name = "Broker Address">
+         <value>test.mosquitto.org</value>
+      </configitem>
+      <configitem name = "Broker Port">
+         <value>1883</value>
+      </configitem>
+      <configitem name = "Local Port">
+         <value>&lt;Random&gt;</value>
+      </configitem>
+      <configitem name = "Device ID">
+         <value>Test</value>
+      </configitem>
+      <configitem name = "User Name">
+         <value></value>
+      </configitem>
+      <configitem name = "Auth Token">
+         <value></value>
+      </configitem>
+      <configitem name = "Topic">
+         <value>ltrx-test-root/topic-1</value>
+      </configitem>
+      <configitem name = "Diagnostic Log">
+         <value>Full</value>
+      </configitem>
+   </configgroup>
+   <configgroup name = "Line" instance = "1">
+      <configitem name = "Name">
+         <value></value>
+      </configitem>
+      <configitem name = "Interface">
+         <value>RS232</value>
+      </configitem>
+      <configitem name = "State">
+         <value>Enabled</value>
+      </configitem>
+      <configitem name = "Protocol">
+         <value>MQTT</value>
+      </configitem>
+      <configitem name = "Baud Rate">
+         <value>921600 bits per second</value>
+      </configitem>
+      <configitem name = "Parity">
+         <value>None</value>
+      </configitem>
+      <configitem name = "Data Bits">
+         <value>8</value>
+      </configitem>
+      <configitem name = "Stop Bits">
+         <value>1</value>
+      </configitem>
+      <configitem name = "Flow Control">
+         <value>Hardware</value>
+      </configitem>
+      <configitem name = "Gap Timer">
+         <value>&lt;Four Character Periods&gt;</value>
+      </configitem>
+      <configitem name = "Threshold">
+         <value>56 bytes</value>
+      </configitem>
+      <configitem name = "Push">
+         <value></value>
+      </configitem>
+   </configgroup>
+</configrecord>
